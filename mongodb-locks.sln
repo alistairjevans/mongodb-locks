@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mongodb-locks", "mongodb-locks.csproj", "{1E22C18A-F8F1-40A1-B6AC-DA90D94BC8BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E22C18A-F8F1-40A1-B6AC-DA90D94BC8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E22C18A-F8F1-40A1-B6AC-DA90D94BC8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E22C18A-F8F1-40A1-B6AC-DA90D94BC8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E22C18A-F8F1-40A1-B6AC-DA90D94BC8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EFDCFC3-87CB-4D83-B534-12D75A49B81A}
+	EndGlobalSection
+EndGlobal
