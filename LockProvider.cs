@@ -38,7 +38,7 @@ namespace mongodb_locks
         // Try and acquire the lock
         while (!await distributedLock.AttemptGetLock())
         {
-          // If we failed to acquire the lock after
+          // If we failed to acquire the lock, wait a moment.
           await Task.Delay(100);
 
           // Only try to acquire the lock for 10 seconds
