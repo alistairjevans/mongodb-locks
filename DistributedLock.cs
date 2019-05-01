@@ -45,7 +45,9 @@ namespace mongodb_locks
           // Find a record with the lock ID
           x => x.Id == lockId,
           // If our 'upsert' creates a document, set the ID to the lock ID
-          Builders<LockModel>.Update.SetOnInsert(x => x.Id, lockId),
+          Builders<LockModel>.Update
+            .SetOnInsert(x => x.Id, lockId)
+            .SetOnInsert(x => x.ExpireAt, DateTime.UtcNow.AddMinutes(1)),
           new FindOneAndUpdateOptions<LockModel>
           {
             // If the record doesn't exist, create it.

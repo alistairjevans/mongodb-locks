@@ -24,6 +24,15 @@ namespace mongodb_locks
 
         // Get our collection
         collection = database.GetCollection<LockModel>("resourceLocks");
+
+        // Specify a TTL index on the ExpiryPoint field.
+        collection.Indexes.CreateOne(new CreateIndexModel<LockModel>(
+          Builders<LockModel>.IndexKeys.Ascending(l => l.ExpireAt),
+          new CreateIndexOptions
+          {
+            ExpireAfter = TimeSpan.Zero
+          }
+        ));
       }
 
       public async Task<IDisposable> AcquireLock(string resourceId)
